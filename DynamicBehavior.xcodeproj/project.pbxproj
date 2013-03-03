@@ -1,0 +1,720 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2E914083744EA98FD79A5A9E /* LGExtensible.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9144CE7E32F37BD3021BF7 /* LGExtensible.m */; };
+		2E9140DA2174FDCCB89837FF /* LGBlockRole.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2E9144A323522BFBF2EBA132 /* LGBlockRole.h */; };
+		2E914122D2F4DCB4F49202A9 /* ObjectWrapper.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2E91411BFBF5216E6594DCDB /* ObjectWrapper.h */; };
+		2E914191C658A094CB26E0FF /* LGEnumDictionary.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2E9149267553FB3FA14744AF /* LGEnumDictionary.h */; };
+		2E9141AA3EF7E997253EB744 /* LGExtensible.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2E914740B8F71C3698A4BAA4 /* LGExtensible.h */; };
+		2E9141E91D28FA955D7A7F51 /* LGEnumDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E914B42C063E2C4C07EA01B /* LGEnumDictionary.m */; };
+		2E91424928E042E2BC28D049 /* OtherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E91418AEC2913853097B647 /* OtherTests.m */; };
+		2E914250BF213F71DA93B987 /* LGBlockExtensible.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9148D346405440A45371F7 /* LGBlockExtensible.m */; };
+		2E9143C23C20A20AD8953478 /* SelectorExtensiblePerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9146B7458CC549E7AFC5A3 /* SelectorExtensiblePerson.m */; };
+		2E9143EE95C29A54BF069A12 /* LGClassRole.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E914575A314D6BCB624D45B /* LGClassRole.m */; };
+		2E9144690C64FF45DF511A16 /* ExtensiblePerson.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E914559D7DFC465BEC322B1 /* ExtensiblePerson.m */; };
+		2E91448D66E6A313EF78F069 /* NSObject+LGEnumDictionary.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2E914DFF6007A5463FAB685E /* NSObject+LGEnumDictionary.h */; };
+		2E9144DA5DD27067DEDF62DB /* LGBlockExtensible.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2E914C832696DDB8C52A5D76 /* LGBlockExtensible.h */; };
+		2E9145CB574C993B2CFF705C /* CyclingExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E914569FE078CDB262312D9 /* CyclingExtension.m */; };
+		2E9146CD8C0DE04B2CF3A7AB /* LGEnumDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E914B42C063E2C4C07EA01B /* LGEnumDictionary.m */; };
+		2E9146D5ECEA35B00D334C70 /* LGDynamic.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E914B68932E63A9796B8473 /* LGDynamic.m */; };
+		2E9146E0FD572A80064E0E02 /* LGSelectorExtensible.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2E91405B755CA4115D829C9C /* LGSelectorExtensible.h */; };
+		2E9146E54C04D408BAA96304 /* SomeBlockExtensible.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E914A200273C65259606767 /* SomeBlockExtensible.m */; };
+		2E9146F00E970E68B7BE4A70 /* LGObjectExtender.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E91411902B0ECB65C31ABBC /* LGObjectExtender.m */; };
+		2E914717ED90EA99AA3CF7B6 /* ActivityContextWithClassRoles.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E914660A859C4B2610414DC /* ActivityContextWithClassRoles.m */; };
+		2E91475185540F8BF1739750 /* BlockExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E91494D3B4005C6EB60AF25 /* BlockExtensionTests.m */; };
+		2E914784394AF0A6402612D3 /* LGBlockExtensible.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9148D346405440A45371F7 /* LGBlockExtensible.m */; };
+		2E9147949B1C23B1D0320526 /* ActivityDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E914EF6F016448D18C0AF0E /* ActivityDecorator.m */; };
+		2E9147E32EFE6A44A6D35A35 /* LGClassRole.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2E9146C4173B8D2573000BA0 /* LGClassRole.h */; };
+		2E9147F83204E8180F237537 /* LGContext.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2E914C0B902C7278CCA1BAFB /* LGContext.h */; };
+		2E9147FC3C9DA19CBE9621E0 /* LGClassRole.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E914575A314D6BCB624D45B /* LGClassRole.m */; };
+		2E914807543229F61276D239 /* LGObjectExtender.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2E914CA9A888334769C99FBA /* LGObjectExtender.h */; };
+		2E91481995729776949DA204 /* WSEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E914F60D2B1552D3D88EEB2 /* WSEnum.m */; };
+		2E9148393A9420530D9CAC99 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2E9144E2B79D01BB816B6A35 /* InfoPlist.strings */; };
+		2E91483A07079B17AA7A0AE4 /* DCITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E914199A8ADB48155BFFB3C /* DCITests.m */; };
+		2E9148A91C50288F837C2F04 /* EnumDictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E914033EFFD47080EE82E4D /* EnumDictionaryTests.m */; };
+		2E91491EF9CBFA650BFA978D /* ActivityRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9145C9996E13EF02F48EAA /* ActivityRecord.m */; };
+		2E91496DABAB735B7B5AFD55 /* Something.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9149939FBAD469FC931D06 /* Something.m */; };
+		2E9149881F2F13F6D8024486 /* LGDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E91478829FC767A006D42C1 /* LGDecorator.m */; };
+		2E9149C2EE943D3A750E3528 /* LGContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E914CB463F3667D400AE461 /* LGContext.m */; };
+		2E9149C58C2BD9115A1010E6 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E91420A8198F0FA1247C160 /* SenTestingKit.framework */; };
+		2E9149FBDC176600C4284B66 /* LGBlockRole.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E91413AF575DF10BAD6C505 /* LGBlockRole.m */; };
+		2E914A0E1AE865346EA9FEEE /* LGDynamic.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2E914FDA545D9B3BFE933245 /* LGDynamic.h */; };
+		2E914A21A5D3BA758E3F89AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E9143E28CF358BB9E2FB0CD /* Foundation.framework */; };
+		2E914A56A39D797073873B52 /* LGDynamic.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E914B68932E63A9796B8473 /* LGDynamic.m */; };
+		2E914A77631B6AF312AC5908 /* NSObject+LGEnumDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E914E5D4FE1DB786869AAE5 /* NSObject+LGEnumDictionary.m */; };
+		2E914B8D9C904F59CE48ECC9 /* LGContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E914CB463F3667D400AE461 /* LGContext.m */; };
+		2E914BB898D60825C8611310 /* SomeDynamic.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E91445A614391BBC8819C16 /* SomeDynamic.m */; };
+		2E914BC71B8C5A0F3138968B /* LGDecorator.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E91478829FC767A006D42C1 /* LGDecorator.m */; };
+		2E914BDFA7888C44ADCE17B1 /* ObjectExtensionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E91407560F1C28514983338 /* ObjectExtensionTests.m */; };
+		2E914C54F47E9F71B240493E /* DynamicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E914BDD011F7F17162F0585 /* DynamicTests.m */; };
+		2E914C7818942D6E9430A804 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E914B5A0F29351DEE04F862 /* UIKit.framework */; };
+		2E914C9255B101F99326DCD9 /* ActivityEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E914FCFC4C8AE09DABA63DA /* ActivityEnum.m */; };
+		2E914CE85CBEFFCE9433C6B9 /* LGDecorator.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2E9148BC4B2A7A10F01FCDC5 /* LGDecorator.h */; };
+		2E914CEDB35E010C7B740630 /* LGRole.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2E914F6BFDB456D0948848F4 /* LGRole.h */; };
+		2E914DF995AB4D7C38302882 /* ActivityContextWithBlockRoles.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E914B7CAD8BA7446DC30214 /* ActivityContextWithBlockRoles.m */; };
+		2E914E549D39E16A72B6A0E5 /* LGBlockRole.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E91413AF575DF10BAD6C505 /* LGBlockRole.m */; };
+		2E914E5E2ADD6B44C353AC4F /* NSObject+LGEnumDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E914E5D4FE1DB786869AAE5 /* NSObject+LGEnumDictionary.m */; };
+		2E914ED19C324A57854C35D6 /* WSEnum.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2E914D877C748923AA93EC3D /* WSEnum.h */; };
+		2E914EDE08A720164A64BF0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E9143E28CF358BB9E2FB0CD /* Foundation.framework */; };
+		2E914F12D7DC56C2F6E94C08 /* WSEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E914F60D2B1552D3D88EEB2 /* WSEnum.m */; };
+		2E914F6E17D9D48E12832AF6 /* LGObjectExtender.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E91411902B0ECB65C31ABBC /* LGObjectExtender.m */; };
+		2E914F7FC50A3DC39008E051 /* LGSelectorExtensible.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E914D1C54128273F1C8C359 /* LGSelectorExtensible.m */; };
+		2E914FC8E44DD1014D85EDCA /* LGExtensible.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9144CE7E32F37BD3021BF7 /* LGExtensible.m */; };
+		2E914FCFC7E84810B0B1400F /* LGSelectorExtensible.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E914D1C54128273F1C8C359 /* LGSelectorExtensible.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2E9140567E09ACB26F89FBA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E914C346BC0B729F0B7E449 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E91454B5DD14B77E7F6B09A;
+			remoteInfo = DynamicBehavior;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2E91497C0AF9FFA6D4A7278C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				2E9147E32EFE6A44A6D35A35 /* LGClassRole.h in CopyFiles */,
+				2E9140DA2174FDCCB89837FF /* LGBlockRole.h in CopyFiles */,
+				2E914CEDB35E010C7B740630 /* LGRole.h in CopyFiles */,
+				2E9147F83204E8180F237537 /* LGContext.h in CopyFiles */,
+				2E914A0E1AE865346EA9FEEE /* LGDynamic.h in CopyFiles */,
+				2E914ED19C324A57854C35D6 /* WSEnum.h in CopyFiles */,
+				2E91448D66E6A313EF78F069 /* NSObject+LGEnumDictionary.h in CopyFiles */,
+				2E914191C658A094CB26E0FF /* LGEnumDictionary.h in CopyFiles */,
+				2E9144DA5DD27067DEDF62DB /* LGBlockExtensible.h in CopyFiles */,
+				2E914807543229F61276D239 /* LGObjectExtender.h in CopyFiles */,
+				2E9146E0FD572A80064E0E02 /* LGSelectorExtensible.h in CopyFiles */,
+				2E914CE85CBEFFCE9433C6B9 /* LGDecorator.h in CopyFiles */,
+				2E9141AA3EF7E997253EB744 /* LGExtensible.h in CopyFiles */,
+				2E914122D2F4DCB4F49202A9 /* ObjectWrapper.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2E914033EFFD47080EE82E4D /* EnumDictionaryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnumDictionaryTests.m; sourceTree = "<group>"; };
+		2E91405B755CA4115D829C9C /* LGSelectorExtensible.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSelectorExtensible.h; sourceTree = "<group>"; };
+		2E914065EDDFE5AC35BBC613 /* BlockExtensionTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockExtensionTests.h; sourceTree = "<group>"; };
+		2E91407560F1C28514983338 /* ObjectExtensionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjectExtensionTests.m; sourceTree = "<group>"; };
+		2E91411902B0ECB65C31ABBC /* LGObjectExtender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGObjectExtender.m; sourceTree = "<group>"; };
+		2E91411BFBF5216E6594DCDB /* ObjectWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectWrapper.h; sourceTree = "<group>"; };
+		2E91413AF575DF10BAD6C505 /* LGBlockRole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGBlockRole.m; sourceTree = "<group>"; };
+		2E91418AEC2913853097B647 /* OtherTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherTests.m; sourceTree = "<group>"; };
+		2E914199A8ADB48155BFFB3C /* DCITests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCITests.m; sourceTree = "<group>"; };
+		2E91420A8198F0FA1247C160 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		2E91421845E0249AB10DCAD6 /* ActivityContextWithClassRoles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityContextWithClassRoles.h; sourceTree = "<group>"; };
+		2E9142DB190992ECD7703275 /* libDynamicBehavior.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDynamicBehavior.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E914308D0F6515B95FCD87C /* DynamicBehaviorTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicBehaviorTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E9143E28CF358BB9E2FB0CD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2E91445A614391BBC8819C16 /* SomeDynamic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SomeDynamic.m; sourceTree = "<group>"; };
+		2E9144A323522BFBF2EBA132 /* LGBlockRole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGBlockRole.h; sourceTree = "<group>"; };
+		2E9144CE7E32F37BD3021BF7 /* LGExtensible.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGExtensible.m; sourceTree = "<group>"; };
+		2E914559D7DFC465BEC322B1 /* ExtensiblePerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExtensiblePerson.m; sourceTree = "<group>"; };
+		2E914569FE078CDB262312D9 /* CyclingExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CyclingExtension.m; sourceTree = "<group>"; };
+		2E9145746013F0683D8D84D3 /* ActivityRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityRecord.h; sourceTree = "<group>"; };
+		2E914575A314D6BCB624D45B /* LGClassRole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGClassRole.m; sourceTree = "<group>"; };
+		2E914584FA6D1C7C0958FDD3 /* Something.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Something.h; sourceTree = "<group>"; };
+		2E9145C9996E13EF02F48EAA /* ActivityRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityRecord.m; sourceTree = "<group>"; };
+		2E91462AD39E03B86803D70C /* DynamicBehavior-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DynamicBehavior-Prefix.pch"; sourceTree = "<group>"; };
+		2E914660A859C4B2610414DC /* ActivityContextWithClassRoles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityContextWithClassRoles.m; sourceTree = "<group>"; };
+		2E914698EE63F29CECA1EE3E /* OtherTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherTests.h; sourceTree = "<group>"; };
+		2E9146B7458CC549E7AFC5A3 /* SelectorExtensiblePerson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectorExtensiblePerson.m; sourceTree = "<group>"; };
+		2E9146B8562C18D48EB455E3 /* ObjectExtensionTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjectExtensionTests.h; sourceTree = "<group>"; };
+		2E9146C004EC8E6AC3954BC5 /* ExtensiblePerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtensiblePerson.h; sourceTree = "<group>"; };
+		2E9146C4173B8D2573000BA0 /* LGClassRole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGClassRole.h; sourceTree = "<group>"; };
+		2E91471C3399F0C3D7449D4B /* ActivityEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityEnum.h; sourceTree = "<group>"; };
+		2E914740B8F71C3698A4BAA4 /* LGExtensible.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGExtensible.h; sourceTree = "<group>"; };
+		2E91478829FC767A006D42C1 /* LGDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGDecorator.m; sourceTree = "<group>"; };
+		2E9147C9E1DA6AEE6023F978 /* DynamicTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicTests.h; sourceTree = "<group>"; };
+		2E9148BC4B2A7A10F01FCDC5 /* LGDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGDecorator.h; sourceTree = "<group>"; };
+		2E9148D346405440A45371F7 /* LGBlockExtensible.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGBlockExtensible.m; sourceTree = "<group>"; };
+		2E914924F439399ECFA09463 /* ActivityDecorator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityDecorator.h; sourceTree = "<group>"; };
+		2E9149267553FB3FA14744AF /* LGEnumDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGEnumDictionary.h; sourceTree = "<group>"; };
+		2E9149428667AA7AD0108D31 /* EnumDictionaryTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnumDictionaryTests.h; sourceTree = "<group>"; };
+		2E91494D3B4005C6EB60AF25 /* BlockExtensionTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockExtensionTests.m; sourceTree = "<group>"; };
+		2E914954B2DC9B01AA18A5AD /* SomeDynamic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SomeDynamic.h; sourceTree = "<group>"; };
+		2E9149939FBAD469FC931D06 /* Something.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Something.m; sourceTree = "<group>"; };
+		2E9149E360A7A0CB7366A684 /* SelectorExtensiblePerson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectorExtensiblePerson.h; sourceTree = "<group>"; };
+		2E914A200273C65259606767 /* SomeBlockExtensible.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SomeBlockExtensible.m; sourceTree = "<group>"; };
+		2E914A349C59C1FB19D67F08 /* SomeBlockExtensible.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SomeBlockExtensible.h; sourceTree = "<group>"; };
+		2E914A9EAC3A4A5233D2409E /* DynamicBehaviorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "DynamicBehaviorTests-Info.plist"; sourceTree = "<group>"; };
+		2E914AF4F5E953461E6B30B3 /* BlockUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlockUtil.h; sourceTree = "<group>"; };
+		2E914B03F1DFAA47BC5995D3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2E914B0C7E9E308687CE4A78 /* ActivityContextWithBlockRoles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityContextWithBlockRoles.h; sourceTree = "<group>"; };
+		2E914B42C063E2C4C07EA01B /* LGEnumDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGEnumDictionary.m; sourceTree = "<group>"; };
+		2E914B5A0F29351DEE04F862 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		2E914B68932E63A9796B8473 /* LGDynamic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGDynamic.m; sourceTree = "<group>"; };
+		2E914B7CAD8BA7446DC30214 /* ActivityContextWithBlockRoles.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityContextWithBlockRoles.m; sourceTree = "<group>"; };
+		2E914BDD011F7F17162F0585 /* DynamicTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicTests.m; sourceTree = "<group>"; };
+		2E914C0B902C7278CCA1BAFB /* LGContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGContext.h; sourceTree = "<group>"; };
+		2E914C832696DDB8C52A5D76 /* LGBlockExtensible.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGBlockExtensible.h; sourceTree = "<group>"; };
+		2E914C9B2C97E1E317E93775 /* CyclingExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CyclingExtension.h; sourceTree = "<group>"; };
+		2E914C9F142B3CB1BE3B31BE /* DCITests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCITests.h; sourceTree = "<group>"; };
+		2E914CA9A888334769C99FBA /* LGObjectExtender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGObjectExtender.h; sourceTree = "<group>"; };
+		2E914CB463F3667D400AE461 /* LGContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGContext.m; sourceTree = "<group>"; };
+		2E914D1C54128273F1C8C359 /* LGSelectorExtensible.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSelectorExtensible.m; sourceTree = "<group>"; };
+		2E914D877C748923AA93EC3D /* WSEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSEnum.h; sourceTree = "<group>"; };
+		2E914DFF6007A5463FAB685E /* NSObject+LGEnumDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+LGEnumDictionary.h"; sourceTree = "<group>"; };
+		2E914E5D4FE1DB786869AAE5 /* NSObject+LGEnumDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LGEnumDictionary.m"; sourceTree = "<group>"; };
+		2E914EA5F4A1A4489D1FF833 /* CyclingProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CyclingProtocol.h; sourceTree = "<group>"; };
+		2E914EF6F016448D18C0AF0E /* ActivityDecorator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityDecorator.m; sourceTree = "<group>"; };
+		2E914F60D2B1552D3D88EEB2 /* WSEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSEnum.m; sourceTree = "<group>"; };
+		2E914F6BFDB456D0948848F4 /* LGRole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGRole.h; sourceTree = "<group>"; };
+		2E914FCFC4C8AE09DABA63DA /* ActivityEnum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityEnum.m; sourceTree = "<group>"; };
+		2E914FDA545D9B3BFE933245 /* LGDynamic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGDynamic.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2E91460EA131A29086006F17 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E9149C58C2BD9115A1010E6 /* SenTestingKit.framework in Frameworks */,
+				2E914C7818942D6E9430A804 /* UIKit.framework in Frameworks */,
+				2E914A21A5D3BA758E3F89AC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E914B1A8776B28D30B694A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E914EDE08A720164A64BF0F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2E91412EB36630EB33E7A95D /* ObjectExtension */ = {
+			isa = PBXGroup;
+			children = (
+				2E914559D7DFC465BEC322B1 /* ExtensiblePerson.m */,
+				2E914C9B2C97E1E317E93775 /* CyclingExtension.h */,
+				2E914EF6F016448D18C0AF0E /* ActivityDecorator.m */,
+				2E9146B8562C18D48EB455E3 /* ObjectExtensionTests.h */,
+				2E91407560F1C28514983338 /* ObjectExtensionTests.m */,
+				2E914EA5F4A1A4489D1FF833 /* CyclingProtocol.h */,
+				2E9146C004EC8E6AC3954BC5 /* ExtensiblePerson.h */,
+				2E9146B7458CC549E7AFC5A3 /* SelectorExtensiblePerson.m */,
+				2E9149E360A7A0CB7366A684 /* SelectorExtensiblePerson.h */,
+				2E914924F439399ECFA09463 /* ActivityDecorator.h */,
+				2E914569FE078CDB262312D9 /* CyclingExtension.m */,
+			);
+			path = ObjectExtension;
+			sourceTree = "<group>";
+		};
+		2E9142A0918D15A4F2EFF0F5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2E9142DB190992ECD7703275 /* libDynamicBehavior.a */,
+				2E914308D0F6515B95FCD87C /* DynamicBehaviorTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E91433D9FECB18D2FD6CD36 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				2E914D877C748923AA93EC3D /* WSEnum.h */,
+				2E914F60D2B1552D3D88EEB2 /* WSEnum.m */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		2E91446A1EB4DA7D352C5B8A /* DynamicBehavior */ = {
+			isa = PBXGroup;
+			children = (
+				2E914EACE4C8F5564EB14663 /* Supporting Files */,
+				2E9146EB5F0E90F155D5E0D0 /* DCI */,
+				2E91475B65D2C2A2931D34BE /* Dynamic */,
+				2E91433D9FECB18D2FD6CD36 /* Enum */,
+				2E914D9C4118C09F142BE0D3 /* EnumDictionary */,
+				2E91481A5F1E6CC84C2979A9 /* Extension */,
+			);
+			path = DynamicBehavior;
+			sourceTree = "<group>";
+		};
+		2E9146861FA438E52A328BBA = {
+			isa = PBXGroup;
+			children = (
+				2E9142A0918D15A4F2EFF0F5 /* Products */,
+				2E9146C4B7E32FA286DDB92C /* Frameworks */,
+				2E91446A1EB4DA7D352C5B8A /* DynamicBehavior */,
+				2E914B091DEFACA51DF6C464 /* DynamicBehaviorTests */,
+			);
+			sourceTree = "<group>";
+		};
+		2E9146C4B7E32FA286DDB92C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E9143E28CF358BB9E2FB0CD /* Foundation.framework */,
+				2E91420A8198F0FA1247C160 /* SenTestingKit.framework */,
+				2E914B5A0F29351DEE04F862 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2E9146EB5F0E90F155D5E0D0 /* DCI */ = {
+			isa = PBXGroup;
+			children = (
+				2E91413AF575DF10BAD6C505 /* LGBlockRole.m */,
+				2E914575A314D6BCB624D45B /* LGClassRole.m */,
+				2E9146C4173B8D2573000BA0 /* LGClassRole.h */,
+				2E9144A323522BFBF2EBA132 /* LGBlockRole.h */,
+				2E914F6BFDB456D0948848F4 /* LGRole.h */,
+				2E914CB463F3667D400AE461 /* LGContext.m */,
+				2E914C0B902C7278CCA1BAFB /* LGContext.h */,
+			);
+			path = DCI;
+			sourceTree = "<group>";
+		};
+		2E9147565873B882D8AB061A /* DCI */ = {
+			isa = PBXGroup;
+			children = (
+				2E914B7CAD8BA7446DC30214 /* ActivityContextWithBlockRoles.m */,
+				2E91421845E0249AB10DCAD6 /* ActivityContextWithClassRoles.h */,
+				2E914B0C7E9E308687CE4A78 /* ActivityContextWithBlockRoles.h */,
+				2E914199A8ADB48155BFFB3C /* DCITests.m */,
+				2E914C9F142B3CB1BE3B31BE /* DCITests.h */,
+				2E914660A859C4B2610414DC /* ActivityContextWithClassRoles.m */,
+			);
+			path = DCI;
+			sourceTree = "<group>";
+		};
+		2E91475B65D2C2A2931D34BE /* Dynamic */ = {
+			isa = PBXGroup;
+			children = (
+				2E914FDA545D9B3BFE933245 /* LGDynamic.h */,
+				2E914B68932E63A9796B8473 /* LGDynamic.m */,
+			);
+			path = Dynamic;
+			sourceTree = "<group>";
+		};
+		2E91481A5F1E6CC84C2979A9 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2E91411902B0ECB65C31ABBC /* LGObjectExtender.m */,
+				2E914C832696DDB8C52A5D76 /* LGBlockExtensible.h */,
+				2E914CA9A888334769C99FBA /* LGObjectExtender.h */,
+				2E9148D346405440A45371F7 /* LGBlockExtensible.m */,
+				2E91405B755CA4115D829C9C /* LGSelectorExtensible.h */,
+				2E91478829FC767A006D42C1 /* LGDecorator.m */,
+				2E9148BC4B2A7A10F01FCDC5 /* LGDecorator.h */,
+				2E914740B8F71C3698A4BAA4 /* LGExtensible.h */,
+				2E914D1C54128273F1C8C359 /* LGSelectorExtensible.m */,
+				2E91411BFBF5216E6594DCDB /* ObjectWrapper.h */,
+				2E9144CE7E32F37BD3021BF7 /* LGExtensible.m */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		2E9148DBD7F41FAACDF0C5F2 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				2E914698EE63F29CECA1EE3E /* OtherTests.h */,
+				2E914584FA6D1C7C0958FDD3 /* Something.h */,
+				2E9149939FBAD469FC931D06 /* Something.m */,
+				2E91418AEC2913853097B647 /* OtherTests.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		2E914B091DEFACA51DF6C464 /* DynamicBehaviorTests */ = {
+			isa = PBXGroup;
+			children = (
+				2E914C5E3C38B70DAE87147D /* Supporting Files */,
+				2E914BC712331AEF8414895D /* BlockExtension */,
+				2E9147565873B882D8AB061A /* DCI */,
+				2E914B6A0CE5FBC10671E042 /* Dynamic */,
+				2E914D5E48253D06DBE8BD21 /* EnumDictionary */,
+				2E91412EB36630EB33E7A95D /* ObjectExtension */,
+				2E9148DBD7F41FAACDF0C5F2 /* Other */,
+			);
+			path = DynamicBehaviorTests;
+			sourceTree = "<group>";
+		};
+		2E914B6A0CE5FBC10671E042 /* Dynamic */ = {
+			isa = PBXGroup;
+			children = (
+				2E9147C9E1DA6AEE6023F978 /* DynamicTests.h */,
+				2E914954B2DC9B01AA18A5AD /* SomeDynamic.h */,
+				2E91445A614391BBC8819C16 /* SomeDynamic.m */,
+				2E914BDD011F7F17162F0585 /* DynamicTests.m */,
+			);
+			path = Dynamic;
+			sourceTree = "<group>";
+		};
+		2E914BC712331AEF8414895D /* BlockExtension */ = {
+			isa = PBXGroup;
+			children = (
+				2E914A349C59C1FB19D67F08 /* SomeBlockExtensible.h */,
+				2E914065EDDFE5AC35BBC613 /* BlockExtensionTests.h */,
+				2E91494D3B4005C6EB60AF25 /* BlockExtensionTests.m */,
+				2E914A200273C65259606767 /* SomeBlockExtensible.m */,
+				2E914AF4F5E953461E6B30B3 /* BlockUtil.h */,
+			);
+			path = BlockExtension;
+			sourceTree = "<group>";
+		};
+		2E914C5E3C38B70DAE87147D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2E914A9EAC3A4A5233D2409E /* DynamicBehaviorTests-Info.plist */,
+				2E9144E2B79D01BB816B6A35 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2E914D5E48253D06DBE8BD21 /* EnumDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				2E9145746013F0683D8D84D3 /* ActivityRecord.h */,
+				2E914033EFFD47080EE82E4D /* EnumDictionaryTests.m */,
+				2E9145C9996E13EF02F48EAA /* ActivityRecord.m */,
+				2E914FCFC4C8AE09DABA63DA /* ActivityEnum.m */,
+				2E9149428667AA7AD0108D31 /* EnumDictionaryTests.h */,
+				2E91471C3399F0C3D7449D4B /* ActivityEnum.h */,
+			);
+			path = EnumDictionary;
+			sourceTree = "<group>";
+		};
+		2E914D9C4118C09F142BE0D3 /* EnumDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				2E914DFF6007A5463FAB685E /* NSObject+LGEnumDictionary.h */,
+				2E914B42C063E2C4C07EA01B /* LGEnumDictionary.m */,
+				2E914E5D4FE1DB786869AAE5 /* NSObject+LGEnumDictionary.m */,
+				2E9149267553FB3FA14744AF /* LGEnumDictionary.h */,
+			);
+			path = EnumDictionary;
+			sourceTree = "<group>";
+		};
+		2E914EACE4C8F5564EB14663 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2E91462AD39E03B86803D70C /* DynamicBehavior-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2E91454B5DD14B77E7F6B09A /* DynamicBehavior */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E91471808FE7D41466B98AE /* Build configuration list for PBXNativeTarget "DynamicBehavior" */;
+			buildPhases = (
+				2E91428659658FF47EC19159 /* Sources */,
+				2E914B1A8776B28D30B694A0 /* Frameworks */,
+				2E91497C0AF9FFA6D4A7278C /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DynamicBehavior;
+			productName = DynamicBehavior;
+			productReference = 2E9142DB190992ECD7703275 /* libDynamicBehavior.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		2E914D91D8C68F6547C6481B /* DynamicBehaviorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E914B030DB0DB8D039CA74B /* Build configuration list for PBXNativeTarget "DynamicBehaviorTests" */;
+			buildPhases = (
+				2E914E837828951323CE8C08 /* Sources */,
+				2E91460EA131A29086006F17 /* Frameworks */,
+				2E91476C06C20708DB9815FF /* Resources */,
+				2E914DD5A2AEF69CE7A6A444 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2E9148805627BAF544C89C62 /* PBXTargetDependency */,
+			);
+			name = DynamicBehaviorTests;
+			productName = DynamicBehaviorTests;
+			productReference = 2E914308D0F6515B95FCD87C /* DynamicBehaviorTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2E914C346BC0B729F0B7E449 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 2E91412D15CD29187EE38A69 /* Build configuration list for PBXProject "DynamicBehavior" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2E9146861FA438E52A328BBA;
+			productRefGroup = 2E9142A0918D15A4F2EFF0F5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2E91454B5DD14B77E7F6B09A /* DynamicBehavior */,
+				2E914D91D8C68F6547C6481B /* DynamicBehaviorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2E91476C06C20708DB9815FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E9148393A9420530D9CAC99 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2E914DD5A2AEF69CE7A6A444 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2E91428659658FF47EC19159 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E9149FBDC176600C4284B66 /* LGBlockRole.m in Sources */,
+				2E9143EE95C29A54BF069A12 /* LGClassRole.m in Sources */,
+				2E914B8D9C904F59CE48ECC9 /* LGContext.m in Sources */,
+				2E9146D5ECEA35B00D334C70 /* LGDynamic.m in Sources */,
+				2E91481995729776949DA204 /* WSEnum.m in Sources */,
+				2E9141E91D28FA955D7A7F51 /* LGEnumDictionary.m in Sources */,
+				2E914E5E2ADD6B44C353AC4F /* NSObject+LGEnumDictionary.m in Sources */,
+				2E9146F00E970E68B7BE4A70 /* LGObjectExtender.m in Sources */,
+				2E914784394AF0A6402612D3 /* LGBlockExtensible.m in Sources */,
+				2E9149881F2F13F6D8024486 /* LGDecorator.m in Sources */,
+				2E914FCFC7E84810B0B1400F /* LGSelectorExtensible.m in Sources */,
+				2E914FC8E44DD1014D85EDCA /* LGExtensible.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E914E837828951323CE8C08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E91475185540F8BF1739750 /* BlockExtensionTests.m in Sources */,
+				2E9146E54C04D408BAA96304 /* SomeBlockExtensible.m in Sources */,
+				2E914DF995AB4D7C38302882 /* ActivityContextWithBlockRoles.m in Sources */,
+				2E91483A07079B17AA7A0AE4 /* DCITests.m in Sources */,
+				2E914717ED90EA99AA3CF7B6 /* ActivityContextWithClassRoles.m in Sources */,
+				2E914BB898D60825C8611310 /* SomeDynamic.m in Sources */,
+				2E914C54F47E9F71B240493E /* DynamicTests.m in Sources */,
+				2E9148A91C50288F837C2F04 /* EnumDictionaryTests.m in Sources */,
+				2E91491EF9CBFA650BFA978D /* ActivityRecord.m in Sources */,
+				2E914C9255B101F99326DCD9 /* ActivityEnum.m in Sources */,
+				2E9144690C64FF45DF511A16 /* ExtensiblePerson.m in Sources */,
+				2E9147949B1C23B1D0320526 /* ActivityDecorator.m in Sources */,
+				2E914BDFA7888C44ADCE17B1 /* ObjectExtensionTests.m in Sources */,
+				2E9143C23C20A20AD8953478 /* SelectorExtensiblePerson.m in Sources */,
+				2E9145CB574C993B2CFF705C /* CyclingExtension.m in Sources */,
+				2E91496DABAB735B7B5AFD55 /* Something.m in Sources */,
+				2E91424928E042E2BC28D049 /* OtherTests.m in Sources */,
+				2E914A77631B6AF312AC5908 /* NSObject+LGEnumDictionary.m in Sources */,
+				2E914250BF213F71DA93B987 /* LGBlockExtensible.m in Sources */,
+				2E914F7FC50A3DC39008E051 /* LGSelectorExtensible.m in Sources */,
+				2E914F6E17D9D48E12832AF6 /* LGObjectExtender.m in Sources */,
+				2E914083744EA98FD79A5A9E /* LGExtensible.m in Sources */,
+				2E914BC71B8C5A0F3138968B /* LGDecorator.m in Sources */,
+				2E9146CD8C0DE04B2CF3A7AB /* LGEnumDictionary.m in Sources */,
+				2E914F12D7DC56C2F6E94C08 /* WSEnum.m in Sources */,
+				2E914A56A39D797073873B52 /* LGDynamic.m in Sources */,
+				2E9149C2EE943D3A750E3528 /* LGContext.m in Sources */,
+				2E9147FC3C9DA19CBE9621E0 /* LGClassRole.m in Sources */,
+				2E914E549D39E16A72B6A0E5 /* LGBlockRole.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2E9148805627BAF544C89C62 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E91454B5DD14B77E7F6B09A /* DynamicBehavior */;
+			targetProxy = 2E9140567E09ACB26F89FBA0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2E9144E2B79D01BB816B6A35 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E914B03F1DFAA47BC5995D3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2E9140131FBD34DA7BD53550 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2E914080CD88BBB2C5505E55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/DynamicBehavior.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DynamicBehavior/DynamicBehavior-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		2E9140FF80EE5811C509F7EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DynamicBehavior/DynamicBehavior-Prefix.pch";
+				INFOPLIST_FILE = "DynamicBehaviorTests/DynamicBehaviorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		2E9144A22BCFBC0FB9CD5110 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DynamicBehavior/DynamicBehavior-Prefix.pch";
+				INFOPLIST_FILE = "DynamicBehaviorTests/DynamicBehaviorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		2E9144D84B7F496F3D2D18D9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/DynamicBehavior.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DynamicBehavior/DynamicBehavior-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		2E914A27D93D72BED899DC62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2E91412D15CD29187EE38A69 /* Build configuration list for PBXProject "DynamicBehavior" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E9140131FBD34DA7BD53550 /* Release */,
+				2E914A27D93D72BED899DC62 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E91471808FE7D41466B98AE /* Build configuration list for PBXNativeTarget "DynamicBehavior" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E9144D84B7F496F3D2D18D9 /* Release */,
+				2E914080CD88BBB2C5505E55 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2E914B030DB0DB8D039CA74B /* Build configuration list for PBXNativeTarget "DynamicBehaviorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E9144A22BCFBC0FB9CD5110 /* Release */,
+				2E9140FF80EE5811C509F7EB /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2E914C346BC0B729F0B7E449 /* Project object */;
+}
