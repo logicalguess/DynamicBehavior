@@ -22,10 +22,6 @@
     return [[LGClassRole alloc] initWithProtocol:protocol implClass:implClass];
 }
 
-- (Protocol *)protocol {
-    return _protocol;
-}
-
 - (id)enableOnObject:(id)obj {
     return [[LGObjectExtender sharedInstance] extendTarget:obj withClass:[self implClass] forProtocol:[self protocol]];
 }

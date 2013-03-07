@@ -38,10 +38,6 @@
     return [[LGBlockRole alloc] initWithProtocol:protocol blocks:blocksBySelector];
 }
 
-- (Protocol *)protocol {
-    return _protocol;
-}
-
 - (id)enableOnObject:(id)obj {
     for (NSString *sel in _blocksBySelector) {
         [[LGObjectExtender sharedInstance] extendTarget:obj withBlock:[_blocksBySelector objectForKey:sel] forSelector:NSSelectorFromString(sel)];
