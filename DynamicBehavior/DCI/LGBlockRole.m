@@ -2,30 +2,31 @@
 #import "LGBlockRole.h"
 #import "LGObjectExtender.h"
 
+@interface LGBlockRole ()
+@property Protocol *protocol;
+@property NSMutableDictionary *blocksBySelector;
+@end
 
-@implementation LGBlockRole {
-    Protocol *_protocol;
-    NSMutableDictionary *_blocksBySelector;
-}
+@implementation LGBlockRole
 
 - (instancetype)initWithProtocol:(Protocol *)protocol blocks:(NSDictionary *)blocksBySelector {
     self = [super init];
     if (self) {
-        _protocol = protocol;
-        _blocksBySelector = [NSMutableDictionary dictionary];
+        [self setProtocol:protocol];
+        [self setBlocksBySelector:[NSMutableDictionary dictionary]];
         unsigned int count;
         struct objc_method_description *descriptions = protocol_copyMethodDescriptionList(protocol, YES, YES, &count);
         for (NSUInteger i = 0; i < count; i++) {
             NSString *sel = NSStringFromSelector(descriptions[i].name);
             id block = [blocksBySelector valueForKey:sel];
             if (block) {
-                [_blocksBySelector setValue:block forKey:sel];
+                [[self blocksBySelector] setValue:block forKey:sel];
             }
         }
-        if ([_blocksBySelector count] != [blocksBySelector count]) {
+        if ([[self blocksBySelector] count] != [blocksBySelector count]) {
             NSLog(@"Some selectors are not on protocol");
         }
-        if ([_blocksBySelector count] != count) {
+        if ([[self blocksBySelector] count] != count) {
             NSLog(@"Some selectors on protocol not implemented");
         }
     }

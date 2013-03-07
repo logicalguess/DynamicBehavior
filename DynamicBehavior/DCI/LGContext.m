@@ -5,19 +5,17 @@
 
 
 @interface LGContext ()
-- (void)fillRole:(WSEnum *)roleName withObject:(id)obj;
+@property LGEnumDictionary *roles;
+@property LGEnumDictionary *performers;
 
 @end
 
-@implementation LGContext {
-    LGEnumDictionary *_roles;
-    LGEnumDictionary *_performers;
-}
+@implementation LGContext
 - (id)initWithRoles:(LGEnumDictionary *)namedRolesDictionary {
     self = [super init];
     if (self) {
-        _roles = namedRolesDictionary;
-        _performers = [[LGEnumDictionary alloc] initWithEnumClass:[namedRolesDictionary enumClass]];
+        [self setRoles:namedRolesDictionary];
+        [self setPerformers:[[LGEnumDictionary alloc] initWithEnumClass:[namedRolesDictionary enumClass]]];
     }
     return self;
 }
@@ -28,25 +26,25 @@
 
 - (void)fillRolesWithObjects:(LGEnumDictionary *)namedObjectsDictionary {
     Class enumClass = [namedObjectsDictionary enumClass];
-    if (![enumClass isEqual:[_roles enumClass]]) {
+    if (![enumClass isEqual:[[self roles] enumClass]]) {
         @throw [[NSException alloc] initWithName:@"Invalid enum class" reason:@"The role names don't match" userInfo:nil];
     }
     NSArray *roles = [enumClass enumValues];
     for (WSEnum *roleName in roles)  {
         id obj = [namedObjectsDictionary objectForEnum:roleName];
         if (obj && obj != [NSNull null]) {
-            id performer = [(id<LGRole>) [_roles objectForEnum:roleName] enableOnObject:obj];
-            [_performers setObject:performer forEnum:roleName];
+            [self fillRole:roleName withObject:obj];
         }
     }
 }
 
 - (void)fillRole:(WSEnum *)roleName withObject:(id)obj {
-    [_performers setObject:[(id<LGRole>)[_roles objectForEnum:roleName] enableOnObject:obj] forEnum:roleName];
+    id performer = [(id<LGRole>) [[self roles] objectForEnum:roleName] enableOnObject:obj];
+    [[self performers] setObject:performer forEnum:roleName];
 }
 
 - (id)performerForRole:(WSEnum *)roleName {
-    return [_performers objectForEnum:roleName];
+    return [[self performers] objectForEnum:roleName];
 }
 
 - (id)run {

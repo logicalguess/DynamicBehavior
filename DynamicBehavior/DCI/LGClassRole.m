@@ -1,17 +1,18 @@
 #import "LGClassRole.h"
 #import "LGObjectExtender.h"
 
+@interface LGClassRole ()
+@property Protocol * protocol;
+@property Class implClass;
+@end
 
-@implementation LGClassRole {
-    Protocol * _protocol;
-    Class _implClass;
-}
+@implementation LGClassRole
 
 - (instancetype)initWithProtocol:(Protocol *)protocol implClass:(Class)implClass {
     self = [super init];
     if (self) {
-        _protocol = protocol;
-        _implClass = implClass;
+        [self setProtocol:protocol];
+        [self setImplClass:implClass];
     }
 
     return self;
@@ -26,7 +27,7 @@
 }
 
 - (id)enableOnObject:(id)obj {
-    return [[LGObjectExtender sharedInstance] extendTarget:obj withClass:_implClass forProtocol:_protocol];
+    return [[LGObjectExtender sharedInstance] extendTarget:obj withClass:[self implClass] forProtocol:[self protocol]];
 }
 
 @end
