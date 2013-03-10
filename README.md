@@ -202,6 +202,7 @@ Then we can decorate an instance of <code>ActivityEnum</code>:
     [activity name];
 
 The output will show that the method was indded decorated:
+
     2013-03-10 13:52:05.289 otest[3185:707] Before interceptor called
     2013-03-10 13:52:05.290 otest[3185:707] After interceptor called
     
