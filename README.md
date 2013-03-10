@@ -343,7 +343,8 @@ Then we can use <code>LGObjectExtender</code> to enhance/extend an instance:
     result = [(id<CyclingProtocol>)obj cycle:@"FROM-CYCLE-METHOD"];
     STAssertTrue([result isEqualToString:@"EXTENSION-FROM-CYCLE-METHOD"], @"not right result");
     
-DCI suggests using roles to manage extensions in a standard and systematic way. This is the subject of the next section.
+DCI suggests using the concepts of role and context to manage extensions in a standard and systematic way. 
+This is the subject of the next section.
 
 # DCI Features
 
