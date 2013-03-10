@@ -278,7 +278,10 @@ selectors. Here are the protocol and interface:
     @interface LGBlockExtensible : NSObject <LGBlockExtensible>
     @end
     
-    
+We are making the important simplifying assumption (requirement) that the selectors handled by blocks take at most 
+one parameter. The block will receive the target object as the first parameter, and the selector's single parameter as
+the second. 
+
 # DCI Features
 
 TODO - see unit tests for now
