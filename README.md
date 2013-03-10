@@ -33,7 +33,7 @@ ActivityEnum.m
     @implementation RunningActivityEnum
     @end
 
-## LGEnumDictionary
+## The LGEnumDictionary class
 
 An enum dictionary behaves like a dictionary whose keys are restricted to the values of an enumeration. The implementation
 is actually backed by an array and it is KVC compliant.
@@ -99,5 +99,41 @@ ActivityRecord.m
         [super setObject:value forEnum:key];
     }
     
+    @end
+    
+## The LGEnumDictionary category
+
+Adding this category to a class makes its instances behave like an enum dictionary. 
+As an example we added the category to NSObject (in general this is a bad idea), 
+and then we can write code like this:
+    
+    NSObject *obj = [NSObject new];
+    [obj setEnumClass:[ActivityEnum class]];
+
+    [obj setObject:@"abc" forEnum:[ActivityEnum WALKING]];
+    STAssertEquals([obj objectForEnum:ActivityEnum.WALKING], @"abc", @"incorrect value");
+    
+    [obj clearObjects];
+
+## The LGDynamic class and category
+
+The LGDynamic class makes subclasses behave like a dictionary that will accept any NSString key in a KVC compliant way
+(by handling undefined keys). It does not use instance variables, so it can be used as a category 
+(by copying and pasting or by defining a macro). You guessed, it uses associative references...
+
+### Sample usage
+    SomeDynamic *obj = [SomeDynamic new];
+
+    [obj setValue:@"abc" forKey:@"key1"];
+
+    STAssertEquals([obj valueForKey:@"key1"], @"abc", @"incorrect value");
+    STAssertNil([obj valueForKey:@"key2"], @"value of inexistent should be nil");
+
+SomeDynamic.h
+    @interface SomeDynamic : LGDynamic
+    @end
+
+SOmeDynamic.m
+    @implementation SomeDynamic 
     @end
 
