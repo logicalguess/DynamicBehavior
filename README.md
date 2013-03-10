@@ -156,8 +156,8 @@ SomeDynamic.m
 
 # Instance Enhancement and Behavior Injection
 
-TODO
+TODO - see unit tests for now
 
 # DCI Features
 
-TODO
+TODO - see unit tests for now
