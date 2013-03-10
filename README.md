@@ -1,40 +1,39 @@
-### Enumerations
+## Enumerations
 
 Using WSEnum. Each enum values is defined by a class, so it can provide behavior on top of a "constant" value.
 
-Sample usage:
+### Sample usage
 
 ActivityEnum.h
-<pre><code>
-@interface ActivityEnum : WSEnum
-+ (ActivityEnum*)WALKING;
-+ (ActivityEnum*)RUNNING;
-+ (ActivityEnum*)CYCLING; 
-@end
-</code></pre>
+
+    @interface ActivityEnum : WSEnum
+    + (ActivityEnum*)WALKING;
+    + (ActivityEnum*)RUNNING;
+    + (ActivityEnum*)CYCLING; 
+    @end
+
 ActivityEnum.m
-<pre><code>
-@interface RunningActivityEnum : ActivityEnum @end
-@interface WalkingActivityEnum : ActivityEnum @end
-@interface CyclingActivityEnum : ActivityEnum @end
 
-@implementation ActivityEnum
-WS_ENUM(CyclingActivityEnum, CYCLING)
-WS_ENUM(RunningActivityEnum, RUNNING)
-WS_ENUM(WalkingActivityEnum, WALKING)
-@end
+    @interface RunningActivityEnum : ActivityEnum @end
+    @interface WalkingActivityEnum : ActivityEnum @end
+    @interface CyclingActivityEnum : ActivityEnum @end
+    
+    @implementation ActivityEnum
+    WS_ENUM(CyclingActivityEnum, CYCLING)
+    WS_ENUM(RunningActivityEnum, RUNNING)
+    WS_ENUM(WalkingActivityEnum, WALKING)
+    @end
+    
+    @implementation CyclingActivityEnum
+    @end
+    
+    @implementation WalkingActivityEnum
+    @end
+    
+    @implementation RunningActivityEnum
+    @end
 
-@implementation CyclingActivityEnum
-@end
-
-@implementation WalkingActivityEnum
-@end
-
-@implementation RunningActivityEnum
-@end
-</code></pre>
-
-### LGEnumDictionary
+## LGEnumDictionary
 
 An enum dictionary behaves like a dictionary whose keys are restricted to the values of an enumeration. The implementation
 is actually backed by an array and it is KVC compliant.
@@ -44,33 +43,61 @@ expresses the structure of data, and it can be used to do that in a consistent w
 a model and view can use the same enumeration to epxress the dependency on receieving and the promise to provide data
 that is structured in a certain way.
 
-Sample usage:
+### Protocol
+
+The following protocol describes the interface of an LGEnumDictionary:
+
+    @protocol LGEnumDictionary <NSObject>
+    - (id)objectForEnum:(WSEnum *)key;
+    - (void)setObject:(id)value forEnum:(WSEnum *)key;
+    - (void)clearObjects;
+    @end
+
+### Sample usage
+
+We can create an instance of LGEnumDictionary by using the factory method dictionaryWithEnumClass:
+
+    LGEnumDictionary *rec = [LGEnumDictionary dictionaryWithEnumClass:[ActivityEnum class]];
+
+    STAssertTrue([[ActivityRecord class] conformsToProtocol:@protocol(LGEnumDictionary)], @"should conform to protocol");
+
+    [rec setObject:@"abc" forEnum:[ActivityEnum WALKING]];
+    STAssertEquals([rec valueForKey:@"WALKING"], @"abc", @"incorrect value");
+
+    [rec setValue:@"def" forKey:@"CYCLING"];
+    STAssertEquals([rec valueForKey:@"CYCLING"], @"def", @"incorrect value");
+    STAssertEquals([rec objectForEnum:ActivityEnum.CYCLING], @"def", @"incorrect value");
+
+    [rec clearObjects];
+
+Or we can create a dedicated subclass if it is going to be used a lot in a project and/or if we want 
+more help from the compiler.
 
 ActivityRecord.h
-<pre><code>
-@class ActivityEnum;
 
-@interface ActivityRecord : LGEnumDictionary
-- (id)objectForEnum:(ActivityEnum *)key;
-- (void)setObject:(id)value forEnum:(ActivityEnum *)key;
-@end
-</code></pre>
+    @class ActivityEnum;
+    
+    @interface ActivityRecord : LGEnumDictionary
+    - (id)objectForEnum:(ActivityEnum *)key;
+    - (void)setObject:(id)value forEnum:(ActivityEnum *)key;
+    @end
+
 ActivityRecord.m
-<pre><code>@implementation ActivityRecord {
 
-}
-- (id)init {
-    return [super initWithEnumClass:[ActivityEnum class]];
-}
-
-- (id)objectForEnum:(ActivityEnum *)key {
-    return [super objectForEnum:key];
-}
-
-- (void)setObject:(id)value forEnum:(ActivityEnum *)key {
-    [super setObject:value forEnum:key];
-}
-
-@end
-</code></pre>
+    @implementation ActivityRecord {
+    
+    }
+    - (id)init {
+        return [super initWithEnumClass:[ActivityEnum class]];
+    }
+    
+    - (id)objectForEnum:(ActivityEnum *)key {
+        return [super objectForEnum:key];
+    }
+    
+    - (void)setObject:(id)value forEnum:(ActivityEnum *)key {
+        [super setObject:value forEnum:key];
+    }
+    
+    @end
 
