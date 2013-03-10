@@ -61,4 +61,22 @@ NSString  * kACTIVITY_CYCLING;
     STAssertEqualObjects([rec objectForEnum:ActivityEnum.CYCLING], [NSNull null], @"incorrect value");
 }
 
+- (void)testEnumDictionary
+{
+    LGEnumDictionary *rec = [LGEnumDictionary dictionaryWithEnumClass:[ActivityEnum class]];
+
+
+    STAssertTrue([[ActivityRecord class] conformsToProtocol:@protocol(LGEnumDictionary)], @"should conform to protocol");
+
+    [rec setObject:@"abc" forEnum:[ActivityEnum WALKING]];
+    STAssertEquals([rec valueForKey:@"WALKING"], @"abc", @"incorrect value");
+
+    [rec setValue:@"def" forKey:@"CYCLING"];
+    STAssertEquals([rec valueForKey:kACTIVITY_CYCLING], @"def", @"incorrect value");
+    STAssertEquals([rec objectForEnum:ActivityEnum.CYCLING], @"def", @"incorrect value");
+
+    [rec clearObjects];
+    STAssertEqualObjects([rec objectForEnum:ActivityEnum.CYCLING], [NSNull null], @"incorrect value");
+}
+
 @end

@@ -13,7 +13,9 @@
 
 @property(nonatomic, retain) Class enumClass;
 
-- (id)initWithEnumClass:(Class)anEnumClass;
++ (LGEnumDictionary *)dictionaryWithEnumClass:(Class)enumClass;
+
+- (id)initWithEnumClass:(Class)enumClass;
 - (id)objectForEnum:(WSEnum *)key;
 - (void)setObject:(id)value forEnum:(WSEnum *)key;
 - (id)valueForKey:(NSString *)key;

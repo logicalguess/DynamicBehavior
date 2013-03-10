@@ -12,10 +12,14 @@
 
 }
 
-- (id)initWithEnumClass:(Class)anEnumClass {
++ (LGEnumDictionary *)dictionaryWithEnumClass:(Class)enumClass {
+    return [[LGEnumDictionary alloc] initWithEnumClass:enumClass];
+}
+
+- (id)initWithEnumClass:(Class)enumClass {
     if (self = [super init]) {
-        [self setEnumClass:anEnumClass];
-        NSArray *enumValues = [anEnumClass enumValues];
+        [self setEnumClass:enumClass];
+        NSArray *enumValues = [enumClass enumValues];
         int count = [enumValues count];
 
         arrayStore = [NSMutableArray arrayWithCapacity:count];
