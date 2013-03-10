@@ -6,7 +6,7 @@ Objective-C.
 # Dynamic Features
 
 In order to automate the data flow in a non-trivial application we want to avoid relying on properties, and instead we
-want a mechanism that ensures we provide and consume **ALL** and **ONLY** the pieces of data that belongs in a certain
+want a mechanism that ensures we provide and consume **ALL** and **ONLY** the pieces of data that belong in a certain
 **context**.
 
 ## Enumerations
