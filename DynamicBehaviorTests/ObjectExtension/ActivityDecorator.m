@@ -1,10 +1,7 @@
 #import "ActivityDecorator.h"
 
 
-@implementation ActivityDecorator {
-
-}
-
+@implementation ActivityDecorator
 - (void)before_name {
     NSLog(@"Before interceptor called");
 }

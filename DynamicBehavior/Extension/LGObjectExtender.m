@@ -4,7 +4,6 @@
 #import "ObjectWrapper.h"
 #import "LGDecorator.h"
 #import "LGExtensible.h"
-#import "LGBlockExtensible.h"
 
 
 @implementation LGObjectExtender {
@@ -65,7 +64,7 @@
     return target;
 }
 
-- (void)extendTarget:(id)target WithClass:(Class)cls forSelectorsWithPrefix:(NSString *)prefix {
+- (id)extendTarget:(id)target WithClass:(Class)cls forSelectorsWithPrefix:(NSString *)prefix {
     id extension = [[cls alloc] initWithTarget:target];
     Class currentClass = cls;
     // Iterate over the class and all superclasses
@@ -85,6 +84,7 @@
         free(methodList);
         currentClass = class_getSuperclass(currentClass);
     }
+    return target;
 }
 
 

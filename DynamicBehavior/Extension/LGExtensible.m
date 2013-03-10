@@ -23,6 +23,7 @@ static char extensionKey;
 -(id)forwardingTargetForSelector:(SEL)sel {
     id target = nil;
     id extension = [self extension];
+    // check the extension first
     if ([extension respondsToSelector:sel])
         target = extension;
     return target;
