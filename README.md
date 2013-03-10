@@ -282,6 +282,67 @@ We are making the important simplifying assumption (requirement) that the select
 one parameter. The block will receive the target object as the first parameter, and the selector's single parameter as
 the second. 
 
+## The LGObjectExtender singleton helper
+
+This is a utility class that encapsulates the usage of the extension methods presented above.
+
+    @interface LGObjectExtender : NSObject
+    + (id)sharedInstance;
+    
+    - (id)extendTarget:(id)target withObject:(id)obj forSelector:(SEL)sel;
+    - (id)extendTarget:(id)target withBlock:(extension_block_t)block forSelector:(SEL)sel;
+    - (id)extendTarget:(id)target withClass:(Class)cls forProtocol:(Protocol *)protocol;
+    - (id)extendTarget:(id)target WithClass:(Class)cls forSelectorsWithPrefix:(NSString *)prefix;
+    
+    @end
+
+## Sample Usage
+
+It is always a good idea to define a protocol for the desired extension:
+
+    @protocol CyclingProtocol <NSObject>
+    - (NSString *)cycle:(id)param;
+    @end
+
+Then write the extension class interface:
+
+    @interface CyclingExtension : NSObject <ObjectWrapper, CyclingProtocol>
+    
+    @end
+    
+And implementation:
+
+    @implementation CyclingExtension {
+        id _target;
+    
+    }
+    - (id)initWithTarget:(id)target {
+        self = [super init];
+        if (self) {
+            _target = target;
+        }
+        return self;
+    }
+    
+    - (NSString *)cycle:(id)param {
+        NSLog(@"Got invocation in CyclingExtension with target: %@ and arg: %@", _target, param);
+        return [NSString stringWithFormat:@"EXTENSION-%@", param];
+    }
+    
+    @end
+    
+Then we can use <code>LGObjectExtender</code> to enhance/extend an instance: 
+
+    SelectorExtensiblePerson *obj = [SelectorExtensiblePerson new];
+    [[LGObjectExtender sharedInstance] extendTarget:obj withClass:[CyclingExtension class]
+                                        forProtocol:@protocol(CyclingProtocol)];
+
+    NSString *result = [obj performSelector:@selector(cycle:) withObject:@"FROM-CYCLE-SELECTOR"];
+    STAssertTrue([result isEqualToString:@"EXTENSION-FROM-CYCLE-SELECTOR"], @"not right result");
+
+    result = [(id<CyclingProtocol>)obj cycle:@"FROM-CYCLE-METHOD"];
+    STAssertTrue([result isEqualToString:@"EXTENSION-FROM-CYCLE-METHOD"], @"not right result");
+
 # DCI Features
 
 TODO - see unit tests for now
