@@ -2,8 +2,8 @@
 #import "LGObjectExtender.h"
 
 @interface LGClassRole ()
-@property Protocol * protocol;
-@property Class implClass;
+@property(readonly) Protocol * protocol;
+@property(readonly) Class implClass;
 @end
 
 @implementation LGClassRole
@@ -11,8 +11,8 @@
 - (instancetype)initWithProtocol:(Protocol *)protocol implClass:(Class)implClass {
     self = [super init];
     if (self) {
-        [self setProtocol:protocol];
-        [self setImplClass:implClass];
+        _protocol = protocol;
+        _implClass = implClass;
     }
 
     return self;

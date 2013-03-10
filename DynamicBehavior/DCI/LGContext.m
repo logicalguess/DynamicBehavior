@@ -5,8 +5,8 @@
 
 
 @interface LGContext ()
-@property LGEnumDictionary *roles;
-@property LGEnumDictionary *performers;
+@property(readonly) LGEnumDictionary *roles;
+@property(readonly) LGEnumDictionary *performers;
 
 @end
 
@@ -14,8 +14,8 @@
 - (id)initWithRoles:(LGEnumDictionary *)namedRolesDictionary {
     self = [super init];
     if (self) {
-        [self setRoles:namedRolesDictionary];
-        [self setPerformers:[[LGEnumDictionary alloc] initWithEnumClass:[namedRolesDictionary enumClass]]];
+        _roles = namedRolesDictionary;
+        _performers = [[LGEnumDictionary alloc] initWithEnumClass:[namedRolesDictionary enumClass]];
     }
     return self;
 }
