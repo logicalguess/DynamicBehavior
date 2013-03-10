@@ -51,14 +51,14 @@ ActivityEnum.m
 An enum dictionary behaves like a dictionary whose keys are restricted to the values of an enumeration. The implementation
 is actually backed by an array and it is KVC compliant.
 
-It provides a compromise between a strongly typed object (an instance of a class) and an NSDictionary. The enumeration
+It provides a compromise between a strongly typed object (an instance of a class) and an <code>NSDictionary</code>. The enumeration
 expresses the structure of data, and it can be used to do that in a consistent way across an application. For example,
 a model and view can use the same enumeration to express the dependency on receiving and the promise to provide data
 that is structured in a certain way.
 
 ### Protocol
 
-The following protocol describes the interface of an LGEnumDictionary:
+The following protocol describes the interface of an <code>LGEnumDictionary</code>:
 
     @protocol LGEnumDictionary <NSObject>
     - (id)objectForEnum:(WSEnum *)key;
@@ -68,7 +68,7 @@ The following protocol describes the interface of an LGEnumDictionary:
 
 ### Sample usage
 
-We can create an instance of LGEnumDictionary by using the factory method dictionaryWithEnumClass:
+We can create an instance of <code>LGEnumDictionary</code> by using the factory method <code>dictionaryWithEnumClass</code>:
 
     LGEnumDictionary *rec = [LGEnumDictionary dictionaryWithEnumClass:[ActivityEnum class]];
 
@@ -142,7 +142,7 @@ The LGDynamic class makes subclasses behave like a dictionary that will accept a
     STAssertEquals([obj valueForKey:@"key1"], @"abc", @"incorrect value");
     STAssertNil([obj valueForKey:@"key2"], @"value of inexistent should be nil");
 
-All the class SomeDynamic has to do is extend LGDynamic 
+All the class <code>SomeDynamic</code> has to do is extend <code>LGDynamic</code> 
 
 SomeDynamic.h  
     
@@ -206,7 +206,7 @@ The output will show that the method was indded decorated:
     2013-03-10 13:52:05.289 otest[3185:707] Before interceptor called
     2013-03-10 13:52:05.290 otest[3185:707] After interceptor called
     
-Here is the interface of the LGDecorator class:
+Here is the interface of the <code>LGDecorator</code> class:
 
     @interface LGDecorator : NSObject
     +(id)decorateInstance:(id)target withClass:(Class)decoratorClass;
