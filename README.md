@@ -1,12 +1,12 @@
 In complex, large-scale projects it is essential to rely on generic code and frameworks to ensure reuse and development speed.
 The single inheritance model is a big obstacle from this point of view, that is why languages like Ruby and Scala
-are using mixins or traits solve this problem. This project is an attempt to bring the same functionality to
+are using mixins or traits to solve this problem. This project is an attempt to bring the same functionality to
 Objective-C.
 
 # Dynamic Features
 
 In order to automate the data flow in a non-trivial application we want to avoid relying on properties, and instead we
-want a mechanism that allows to ensure we provide and consume **ALL** and **ONLY** the pieces of data that belongs in a certain
+want a mechanism that ensures we provide and consume **ALL** and **ONLY** the pieces of data that belongs in a certain
 **context**.
 
 ## Enumerations
