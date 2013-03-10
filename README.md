@@ -227,6 +227,8 @@ respond to the "replaced" or "added" methods.
     
 Unlike <code>LGDecorator</code>, extending an <code>LGExtensible</code> instance will not create a proxy for the real one.
 
+The class is written in such a way that it can be used as a cateogory (by copy and paste or by defining a macro).
+
 ### Sample Usage
 
 Assume we have a class inheriting from <code>LGExtensible</code>:
