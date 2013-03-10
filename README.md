@@ -53,7 +53,7 @@ is actually backed by an array and it is KVC compliant.
 
 It provides a compromise between a strongly typed object (an instance of a class) and an NSDictionary. The enumeration
 expresses the structure of data, and it can be used to do that in a consistent way across an application. For example,
-a model and view can use the same enumeration to epxress the dependency on receieving and the promise to provide data
+a model and view can use the same enumeration to express the dependency on receiving and the promise to provide data
 that is structured in a certain way.
 
 ### Protocol
