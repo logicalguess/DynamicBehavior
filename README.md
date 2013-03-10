@@ -5,7 +5,7 @@ The single inheritance model is a big obstacle from this point of view, that is 
 are using mixins or traits to solve this problem. This project is an attempt to bring the same kind of functionality to
 Objective-C.
 
-# Dynamic Features
+# Dynamic Properties
 
 In order to automate the data flow in a non-trivial application we want to avoid relying on properties, and instead we
 want a mechanism that ensures we provide and consume **ALL** and **ONLY** the pieces of data that belong in a certain
