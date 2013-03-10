@@ -10,5 +10,4 @@
 - (id)extendTarget:(id)target withClass:(Class)cls forProtocol:(Protocol *)protocol;
 - (id)extendTarget:(id)target WithClass:(Class)cls forSelectorsWithPrefix:(NSString *)prefix;
 
-
 @end
