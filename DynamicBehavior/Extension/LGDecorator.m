@@ -1,10 +1,3 @@
-//
-// Created by V005480 on 2/19/13.
-//
-// To change the template use AppCode | Preferences | File Templates.
-//
-
-
 #import "LGDecorator.h"
 
 
