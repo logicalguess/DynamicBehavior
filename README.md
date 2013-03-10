@@ -170,7 +170,14 @@ decoration/proxying/adapting.
 ## The LGDecorator class
 
 This class helps decorate some of the methods of a particular instance, by invoking a *before* and/or *after* method.
+Here is its interface:
 
+    @interface LGDecorator : NSObject
+    +(id)decorateInstance:(id)target withClass:(Class)decoratorClass;
+    +(id)decorateInstance:(id)target with:(id)decorator;
+    @end
+
+The decorated instance is a proxy for the real (target) instance.
 ### Sample Usage
 
 Assume we want to decorate the <code>name</code> method of the <code>ActivityEnum</code> class so we log something 
@@ -205,13 +212,44 @@ The output will show that the method was indded decorated:
 
     2013-03-10 13:52:05.289 otest[3185:707] Before interceptor called
     2013-03-10 13:52:05.290 otest[3185:707] After interceptor called
-    
-Here is the interface of the <code>LGDecorator</code> class:
 
-    @interface LGDecorator : NSObject
-    +(id)decorateInstance:(id)target withClass:(Class)decoratorClass;
-    +(id)decorateInstance:(id)target with:(id)decorator;
+## The LGExtensible class and category
+
+This class allows to "replace" or "add" methods to object instances by specifying another object instance which will 
+respond to the "replaced" or "added" methods. 
+
+    @protocol LGExtensible <NSObject>
+    - (void)extendWithObject:(id)obj;
     @end
+    
+    @interface LGExtensible : NSObject <LGExtensible>
+    @end
+    
+Unlike <code>LGDecorator</code>, extending an <code>LGExtensible</code> instance will not create a proxy for the real one.
+
+### Sample Usage
+
+Assume we have a class inheriting from <code>LGExtensible</code>:
+
+ExtensiblePerson.h
+
+    @interface ExtensiblePerson : LGExtensible
+    @end
+    
+ExtensiblePerson.m
+
+    @implementation ExtensiblePerson  
+    @end
+    
+Then we can add a <code>name</code> method to an instance of it, coming from an <code>ActivityEnum</code> implementation:
+
+    ExtensiblePerson *obj = [ExtensiblePerson new];
+    [obj extendWithObject:ActivityEnum.WALKING];
+
+    STAssertTrue([obj respondsToSelector:@selector(name)], @"should respond to protocol");
+    STAssertEquals([obj performSelector:@selector(name)], @"WALKING", @"incorrect value");
+    STAssertEquals([(ActivityEnum*)obj name], @"WALKING", @"incorrect value");
+
 
 # DCI Features
 
