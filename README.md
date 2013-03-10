@@ -213,7 +213,7 @@ The output will show that the method was indded decorated:
     2013-03-10 13:52:05.289 otest[3185:707] Before interceptor called
     2013-03-10 13:52:05.290 otest[3185:707] After interceptor called
 
-## The LGExtensible class and category
+## The LGExtensible Class and Category
 
 This class allows to "replace" or "add" methods to object instances by specifying another object instance which will 
 respond to the "replaced" or "added" methods. 
@@ -252,7 +252,7 @@ Then we can add a <code>name</code> method to an instance of it, coming from an 
     STAssertEquals([obj performSelector:@selector(name)], @"WALKING", @"incorrect value");
     STAssertEquals([(ActivityEnum*)obj name], @"WALKING", @"incorrect value");
 
-## The LGSelectorExtensible class and category
+## The LGSelectorExtensible Class and Category
 
 Similar to <code>LGExtensible</code> but it allows specifying different objects for different "replaced" or "added" 
 selectors. Here are the protocol and interface:
@@ -264,7 +264,7 @@ selectors. Here are the protocol and interface:
     @interface LGSelectorExtensible : NSObject <LGSelectorExtensible>
     @end
 
-## The LGBlockExtensible class and category
+## The LGBlockExtensible Class and Category
 
 Similar to <code>LGExtensible</code> but it allows specifying different blocks for different "replaced" or "added" 
 selectors. Here are the protocol and interface:
@@ -282,7 +282,7 @@ We are making the important simplifying assumption (requirement) that the select
 one parameter. The block will receive the target object as the first parameter, and the selector's single parameter as
 the second. 
 
-## The LGObjectExtender singleton helper
+## The LGObjectExtender Singleton Helper
 
 This is a utility class that encapsulates the usage of the extension methods presented above.
 
