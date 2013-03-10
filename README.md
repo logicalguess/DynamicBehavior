@@ -252,7 +252,33 @@ Then we can add a <code>name</code> method to an instance of it, coming from an 
     STAssertEquals([obj performSelector:@selector(name)], @"WALKING", @"incorrect value");
     STAssertEquals([(ActivityEnum*)obj name], @"WALKING", @"incorrect value");
 
+## The LGSelectorExtensible class and category
 
+Similar to <code>LGExtensible</code> but it allows specifying different objects for different "replaced" or "added" 
+selectors. Here are the protocol and interface:
+
+    @protocol LGSelectorExtensible <NSObject>
+    - (void)extendWithObject:(id)obj forSelector:(SEL)sel;
+    @end
+    
+    @interface LGSelectorExtensible : NSObject <LGSelectorExtensible>
+    @end
+
+## The LGBlockExtensible class and category
+
+Similar to <code>LGExtensible</code> but it allows specifying different blocks for different "replaced" or "added" 
+selectors. Here are the protocol and interface:
+
+    typedef id (^extension_block_t)(id target, id param);
+    
+    @protocol LGBlockExtensible <NSObject>
+    - (void)extendWithBlock:(extension_block_t)block forSelector:(SEL)sel;
+    @end
+    
+    @interface LGBlockExtensible : NSObject <LGBlockExtensible>
+    @end
+    
+    
 # DCI Features
 
 TODO - see unit tests for now
