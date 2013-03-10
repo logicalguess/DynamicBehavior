@@ -1,3 +1,4 @@
+# Dynamic Features
 ## Enumerations
 
 Using WSEnum. Each enum values is defined by a class, so it can provide behavior on top of a "constant" value.
@@ -129,11 +130,18 @@ The LGDynamic class makes subclasses behave like a dictionary that will accept a
     STAssertEquals([obj valueForKey:@"key1"], @"abc", @"incorrect value");
     STAssertNil([obj valueForKey:@"key2"], @"value of inexistent should be nil");
 
-SomeDynamic.h
+All the class SomeDynamic has to do is extend LGDynamic 
+
+SomeDynamic.h  
+    
     @interface SomeDynamic : LGDynamic
     @end
 
-SOmeDynamic.m
+SomeDynamic.m  
+   
     @implementation SomeDynamic 
     @end
 
+# DCI Features
+
+TODO
