@@ -470,4 +470,4 @@ then pass the object instances and run it:
 
     id result = [ctx run];
     STAssertTrue([result isEqualToString:@"EXTENSION-FROM-BLOCK-CONTEXT"], @"not right result");
-}
+
