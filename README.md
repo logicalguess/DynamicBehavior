@@ -360,8 +360,8 @@ to be injected into instance objects are identified using the same enumeration.
     @class WSEnum;   
     
     @interface LGContext : NSObject
-    - (id)initWithRoles:(LGEnumDictionary *)namedRolesDictionary;
     + (id)contextWithRoles:(LGEnumDictionary *)namedRolesDictionary;
+    - (id)initWithRoles:(LGEnumDictionary *)namedRolesDictionary;
     - (void)fillRolesWithObjects:(LGEnumDictionary *)namedObjectsDictionary;
     - (id)performerForRole:(WSEnum *)roleName;
     - (id)run;
@@ -377,15 +377,15 @@ Each role specifies a protocol:
 Behaviors can be specified using classes:
 
     @interface LGClassRole : NSObject <LGRole>
-    - (instancetype)initWithProtocol:(Protocol *)protocol implClass:(Class)implClass;
     + (instancetype)roleWithProtocol:(Protocol *)protocol implClass:(Class)implClass;
+    - (instancetype)initWithProtocol:(Protocol *)protocol implClass:(Class)implClass;
     @end
 
 or blocks:
 
     @interface LGBlockRole : NSObject <LGRole>
-    - (instancetype)initWithProtocol:(Protocol *)protocol blocks:(NSDictionary *)blocksBySelector;
     + (instancetype)roleWithProtocol:(Protocol *)protocol blocks:(NSDictionary *)blocksBySelector;
+    - (instancetype)initWithProtocol:(Protocol *)protocol blocks:(NSDictionary *)blocksBySelector;
     @end
     
 ## Sample Usage with Class Roles
