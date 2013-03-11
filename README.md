@@ -2,8 +2,8 @@
 
 In complex, large-scale projects it is essential to rely on generic code and frameworks to ensure reuse and development speed.
 The single inheritance model is a big obstacle from this point of view, that is why languages like Ruby and Scala
-are using mixins or traits to solve this problem. This project is an attempt to bring the same kind of functionality to
-Objective-C.
+are using mixins or traits to mix behavior from multiple sources into a single instance. This project is an attempt to 
+bring the same kind of functionality to Objective-C.
 
 # Dynamic Properties
 
