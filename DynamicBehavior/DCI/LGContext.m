@@ -11,6 +11,11 @@
 @end
 
 @implementation LGContext
+
++ (id)contextWithRoles:(LGEnumDictionary *)namedRolesDictionary {
+    return [[LGContext alloc] initWithRoles:namedRolesDictionary];
+}
+
 - (id)initWithRoles:(LGEnumDictionary *)namedRolesDictionary {
     self = [super init];
     if (self) {
@@ -18,10 +23,6 @@
         _performers = [[LGEnumDictionary alloc] initWithEnumClass:[namedRolesDictionary enumClass]];
     }
     return self;
-}
-
-+ (id)contextWithRoles:(LGEnumDictionary *)namedRolesDictionary {
-    return [[LGContext alloc] initWithRoles:namedRolesDictionary];
 }
 
 - (void)fillRolesWithObjects:(LGEnumDictionary *)namedObjectsDictionary {

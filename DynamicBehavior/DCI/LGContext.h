@@ -5,8 +5,9 @@
 
 
 @interface LGContext : NSObject
-- (id)initWithRoles:(LGEnumDictionary *)namedRolesDictionary;
 + (id)contextWithRoles:(LGEnumDictionary *)namedRolesDictionary;
+
+- (id)initWithRoles:(LGEnumDictionary *)namedRolesDictionary;
 - (void)fillRolesWithObjects:(LGEnumDictionary *)namedObjectsDictionary;
 - (id)performerForRole:(WSEnum *)roleName;
 - (id)run;

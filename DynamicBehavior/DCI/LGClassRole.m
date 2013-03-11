@@ -8,6 +8,10 @@
 
 @implementation LGClassRole
 
++ (instancetype)roleWithProtocol:(Protocol *)protocol implClass:(Class)implClass {
+    return [[LGClassRole alloc] initWithProtocol:protocol implClass:implClass];
+}
+
 - (instancetype)initWithProtocol:(Protocol *)protocol implClass:(Class)implClass {
     self = [super init];
     if (self) {
@@ -16,10 +20,6 @@
     }
 
     return self;
-}
-
-+ (instancetype)roleWithProtocol:(Protocol *)protocol implClass:(Class)implClass {
-    return [[LGClassRole alloc] initWithProtocol:protocol implClass:implClass];
 }
 
 - (id)enableOnObject:(id)obj {

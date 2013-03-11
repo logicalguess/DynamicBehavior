@@ -9,6 +9,10 @@
 
 @implementation LGBlockRole
 
++ (instancetype)roleWithProtocol:(Protocol *)protocol blocks:(NSDictionary *)blocksBySelector {
+    return [[LGBlockRole alloc] initWithProtocol:protocol blocks:blocksBySelector];
+}
+
 - (instancetype)initWithProtocol:(Protocol *)protocol blocks:(NSDictionary *)blocksBySelector {
     self = [super init];
     if (self) {
@@ -32,10 +36,6 @@
     }
 
     return self;
-}
-
-+ (instancetype)roleWithProtocol:(Protocol *)protocol blocks:(NSDictionary *)blocksBySelector {
-    return [[LGBlockRole alloc] initWithProtocol:protocol blocks:blocksBySelector];
 }
 
 - (id)enableOnObject:(id)obj {

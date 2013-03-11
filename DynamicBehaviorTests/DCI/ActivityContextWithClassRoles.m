@@ -25,6 +25,4 @@
     id<CyclingProtocol> performer = [self performerForRole:[ActivityEnum CYCLING]];
     return [performer cycle:@"FROM-CLASS-CONTEXT"];
 }
-
-
 @end
