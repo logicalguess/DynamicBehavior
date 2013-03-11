@@ -346,7 +346,7 @@ Then we can use <code>LGObjectExtender</code> to enhance/extend an instance:
 DCI suggests using the concepts of role and context to manage extensions in a standard and systematic way. 
 This is the subject of the next section.
 
-# DCI Features
+# DCI Implementation
 
 The DCI (Data-Context-Interaction) architectural style advocates separating data from behavior and injecting 
 behavior into (domain) objects based on the role they play in a particular context. 
@@ -388,3 +388,86 @@ or blocks:
     - (instancetype)initWithProtocol:(Protocol *)protocol blocks:(NSDictionary *)blocksBySelector;
     + (instancetype)roleWithProtocol:(Protocol *)protocol blocks:(NSDictionary *)blocksBySelector;
     @end
+    
+## Sample Usage with Class Roles
+
+First define the context:
+
+    @implementation ActivityContextWithClassRoles 
+    - (id)init {
+        ActivityRecord *namedRoles = [ActivityRecord new];
+        [namedRoles setObject:[LGClassRole roleWithProtocol:@protocol(CyclingProtocol) implClass:[CyclingExtension class]]
+                         forEnum:[ActivityEnum CYCLING]];
+        self = [super initWithRoles:namedRoles];
+    
+        if (self) {
+        }
+    
+        return self;
+    }
+    
+    - (id)run {
+        id<CyclingProtocol> performer = [self performerForRole:[ActivityEnum CYCLING]];
+        return [performer cycle:@"FROM-CLASS-CONTEXT"];
+    }
+    @end
+
+then pass the object instances and run it:
+
+    ActivityContextWithClassRoles * ctx = [ActivityContextWithClassRoles new];
+
+    ActivityRecord *namedObjects = [ActivityRecord new];
+    [namedObjects setObject:[SelectorExtensiblePerson new] forEnum:[ActivityEnum CYCLING]];
+
+    [ctx fillRolesWithObjects:namedObjects];
+
+    id result = [ctx run];
+    STAssertTrue([result isEqualToString:@"EXTENSION-FROM-CLASS-CONTEXT"], @"not right result");
+    
+## Sample Usage with Block Roles
+
+First define the context:
+
+    @implementation ActivityContextWithBlockRoles {
+        id (^cycle)(ExtensiblePerson *, id);
+    
+    }
+    - (id)init {
+    
+        cycle = (id)^(ExtensiblePerson *target, id param){
+            NSLog(@"Got invocation in the cycle block in context with target: %@ and arg: %@", target, param);
+            return [NSString stringWithFormat:@"EXTENSION-%@", param];
+        };
+    
+        NSMutableDictionary *blocks = [NSMutableDictionary dictionaryWithCapacity:1];
+        [blocks setValue:cycle forKey:@"cycle:"];
+    
+        ActivityRecord *namedRoles = [ActivityRecord new];
+        [namedRoles setObject:[LGBlockRole roleWithProtocol:@protocol(CyclingProtocol) blocks:blocks]
+                         forEnum:[ActivityEnum CYCLING]];
+        self = [super initWithRoles:namedRoles];
+    
+        if (self) {
+        }
+    
+        return self;
+    }
+    
+    - (id)run {
+        id<CyclingProtocol> performer = [self performerForRole:[ActivityEnum CYCLING]];
+        return [performer cycle:@"FROM-BLOCK-CONTEXT"];
+    }
+    @end
+    
+then pass the object instances and run it:
+
+    ActivityContextWithBlockRoles * ctx = [ActivityContextWithBlockRoles new];
+
+    ActivityRecord *namedObjects = [ActivityRecord new];
+    [namedObjects setObject:[SomeBlockExtensible new] forEnum:[ActivityEnum CYCLING]];
+
+    [ctx fillRolesWithObjects:namedObjects];
+
+    id result = [ctx run];
+    STAssertTrue([result isEqualToString:@"EXTENSION-FROM-BLOCK-CONTEXT"], @"not right result");
+}
