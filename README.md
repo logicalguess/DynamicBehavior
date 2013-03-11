@@ -357,8 +357,7 @@ relevant to a particular context (use case) are semantically identified by an en
 to be injected into instance objects are identified using the same enumeration.
 
     @class LGEnumDictionary;
-    @class WSEnum;
-    
+    @class WSEnum;   
     
     @interface LGContext : NSObject
     - (id)initWithRoles:(LGEnumDictionary *)namedRolesDictionary;
