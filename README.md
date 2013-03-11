@@ -348,4 +348,43 @@ This is the subject of the next section.
 
 # DCI Features
 
-TODO - see unit tests for now
+The DCI (Data-Context-Interaction) architectural style advocates separating data from behavior and injecting 
+behavior into (domain) objects based on the role they play in a particular context. 
+More details here: http://www.artima.com/articles/dci_vision.html .
+
+In this project we have implemented the DCI concepts using the features described in the sections above. The roles 
+relevant to a particular context (use case) are semantically identified by an enumeration, and the behaviors
+to be injected into instance objects are identified using the same enumeration.
+
+    @class LGEnumDictionary;
+    @class WSEnum;
+    
+    
+    @interface LGContext : NSObject
+    - (id)initWithRoles:(LGEnumDictionary *)namedRolesDictionary;
+    + (id)contextWithRoles:(LGEnumDictionary *)namedRolesDictionary;
+    - (void)fillRolesWithObjects:(LGEnumDictionary *)namedObjectsDictionary;
+    - (id)performerForRole:(WSEnum *)roleName;
+    - (id)run;
+    @end
+    
+Each role specifies a protocol:
+
+    @protocol LGRole <NSObject>
+    - (Protocol *)protocol;
+    - (id) enableOnObject:(id)obj;
+    @end
+
+Behaviors can be specified using classes:
+
+    @interface LGClassRole : NSObject <LGRole>
+    - (instancetype)initWithProtocol:(Protocol *)protocol implClass:(Class)implClass;
+    + (instancetype)roleWithProtocol:(Protocol *)protocol implClass:(Class)implClass;
+    @end
+
+or blocks:
+
+    @interface LGBlockRole : NSObject <LGRole>
+    - (instancetype)initWithProtocol:(Protocol *)protocol blocks:(NSDictionary *)blocksBySelector;
+    + (instancetype)roleWithProtocol:(Protocol *)protocol blocks:(NSDictionary *)blocksBySelector;
+    @end
