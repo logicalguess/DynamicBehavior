@@ -4,7 +4,7 @@ In complex, large-scale projects it is essential to rely on generic code and fra
 The single inheritance model is a big obstacle from this point of view, that is why languages like Ruby and Scala
 are using mixins or traits to mix behavior from multiple sources into a single instance. This project is an exercise in 
 implementing the same kind of functionality with Objective-C, and in showing how it can be used to implement the DCI 
-(Data-Context-Interaction) architectural style.
+(Data-Context-Interaction) architectural style (http://www.leansoftwarearchitecture.com/home/more-online-resources).
 
 # Dynamic Properties
 
